@@ -52,12 +52,9 @@ public class Cart
 
   private CartItem getCartItem(Book book) 
   {
-    for (int i = 0; i < itemList.size(); i++)
+    for(CartItem item : itemList)
     {
-      if (itemList.get(i).getBook() == book)
-      {
-        return itemList.get(i);
-      }
+    	if(item.getBook() == book) return item;
     }
     return null;
   }
